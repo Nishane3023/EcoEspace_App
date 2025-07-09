@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Define el idioma principal del documento como español -->
+<head>
+  <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configura la vista para dispositivos móviles -->
+  <title>EcoSpace</title> <!-- Establece el título de la página que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="assets/css/style.css"> <!-- Enlaza la hoja de estilos CSS -->
+
+</head>
+<body>
+
+  <section class="hero"> <!-- Seccion Princial hero/banner -->
+    <!-- ================= BARRA SUPERIOR: LOGOS + BOTONES ================= -->
+    <div class="top-bar"> <!-- Contenedor de la barra superior -->
+      <div class="logos"> <!-- Contenedor para logos institucionales -->
+        <img src="assets/img/UPB.png" alt="Logo UPB">
+        <img src="assets/img/Cidet.png" alt="Logo CIDET">
+        <img src="assets/img/ECONOVA.png" alt="Logo Ecopetrol">
+      </div>
+      <div class="auth-buttons"> <!-- Contenedor de botones de autenticación -->
+        <button id="loginBtn">Iniciar Sesión</button> <!-- Botón para inicio de sesión -->
+        <button id="registerBtn">Registrarse</button> <!-- Botón para registro de usuarios -->
+      </div>
+    </div>
+
+    <!-- ================= SLIDER DE LOGOS ADICIONALES ================= -->
+    <div class="slider"> <!-- Contenedor del slider/carrusel de logos -->
+      <img src="ruta/a/logo1.png" alt="Logo Adicional 1">
+      <img src="ruta/a/logo2.png" alt="Logo Adicional 2">
+      <img src="ruta/a/logo3.png" alt="Logo Adicional 3">
+      <img src="ruta/a/logo4.png" alt="Logo Adicional 4">
+    </div>
+
+    <!-- ================= CONTENIDO CENTRAL ================= -->
+    <div class="content"> <!-- Contenedor del contenido principal -->
+      <h1>EcoSpace</h1>
+      <p>
+        La necesidad de garantizar la sostenibilidad energética, ambiental y alimentaria,
+        constituyen un reto para las ciudades del presente y del futuro. La Ecovilla UPB se
+        constituirá en un laboratorio vivo (living lab) para desarrollar soluciones integrales
+        a las problemáticas mencionadas.
+      </p>
+      <a href="#" class="btn">Explora Más</a> <!-- Botón/Link call-to-action -->
+    </div>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <div class="newsletter"> <!-- Contenedor del formulario de newsletter -->
+      <p><strong>Mantente al tanto</strong><br>Con nuestro periodico semanal</p>
+      <form id="newsletterForm"> <!-- Formulario de suscripción -->
+        <input type="email" name="email" placeholder="you@example.com" required> <!-- Campo para email con validación -->
+        <button type="submit">Submit</button> <!-- Botón de envío del formulario -->
+      </form>
+    </div>
+
+    <!-- ================= ETIQUETAS INFERIORES ================= -->
+    <div class="labels"> <!-- Contenedor de etiquetas inferiores -->
+      <div class="label">Label</div>
+      <div class="label">Label</div>
+      <div class="label">Label</div>
+      <div class="label">Label</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script> <!-- Enlaza el archivo JavaScript para interactividad -->
+
+
+<!-- ================= FOOTER ================= -->
+ <footer class="footer"> 
+<div class ="footer-content">
+  <img src="assets/img/PataDeLogos.png" alt="logo-footer">
+</div>
+<p><small>© 2023 EcoSpace. Todos los derechos reservados.</small></p>
+ </footer>
+
+</body>
+</html>
+
+<!-- ALGUNAS ANOTACIONES -->
+ <!--
+- El div es una especie de contenedor que agrupa elementos HTML para aplicar estilos o scripts.
+- las clases son atributos que se utilizan para aplicar estilos CSS a los elementos HTML.
+- El atributo "alt" en las imágenes proporciona una descripción alternativa que es importante para la accesibilidad.
+- El atributo "href" en los enlaces especifica la URL a la que se dirige el enlace.
+- El atributo "src" en las imágenes especifica la ruta del archivo de imagen que se va a mostrar.
+- El atributo "type" en los botones define el tipo de botón, como "submit" para enviar un formulario.
+- El atributo "required" en los campos de formulario indica que el campo debe ser completado antes de enviar el formulario.
+- El atributo "placeholder" en los campos de entrada proporciona un texto de ejemplo que desaparece cuando el usuario comienza a escribir.
+- <a href="#"> es un enlace que no lleva a ninguna parte, se usa comúnmente como marcador de posición.
+- <a> es un elemento de anclaje que crea un enlace a otra página o recurso.
+- <strong> es un elemento que se utiliza para resaltar texto importante, generalmente se muestra en negrita.
+- <br> es un elemento de salto de línea que se utiliza para crear un salto de línea en el texto.
+
+
+    1. La sección "hero" es la principal de la página, contiene el banner, los logos, botones de autenticación y el contenido central.
+    2. La barra superior incluye los logos de las instituciones y botones para iniciar sesión y registrarse.
+    3. El slider de logos adicionales es un carrusel que muestra más logos relevantes.
+    4. El contenido central incluye un título, un párrafo descriptivo y un botón para explorar más.
+    5. La sección de newsletter permite a los usuarios suscribirse para recibir actualizaciones
+    6. Las etiquetas inferiores son elementos de diseño que pueden ser utilizados para destacar información adicional.
+    7. El formulario de newsletter incluye un campo para el correo electrónico y un botón de
+    envío.
+
+ -->

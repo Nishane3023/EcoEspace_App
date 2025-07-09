@@ -1,0 +1,193 @@
+:root { /*Selector que apunta al elemento raiz del documento, las variables que aqui se definen tienen un alcance global*/
+  /* Paleta principal */
+  --celeste: #54e9f3;   /*Se definen variables CSS reutilizables, los nombres con -- son la sintaxis estandar para variables CSS
+                            "su sintaxis es: --nombre-variable: valor;"*/
+  --morado-vivo: #9c44f2;
+  --gris-claro: #ececec;
+  --azul-oscuro: #230871;
+  
+  /* Tonos secundarios */
+  --negro-azulado: #231e46;
+  --azul-noche: #200f6c;
+  --azul-fuerte: #2334a9;
+  --azul-medio: #549ad2;
+  --celeste-claro: #81e7f2;
+  
+  --morado-oscuro: #3a0192;
+  --morado-medio: #4c22ac;
+  --morado-vibrante: #6422e1;
+  --lila: #924fea;
+  --rosado: #c95df5;
+  
+  /* Neutrales */
+  --blanco-calido: #fbfff8;
+  --gris-suave: #ededed;
+  --blanco: #f8f9f5;
+}
+
+/* ========== LANDING PAGE STYLES ========== */
+/* Reset y tipografía */
+*, *::before, *::after {
+  box-sizing: border-box; /* El ancho/alto INCLUYEN padding y bordes (no se suman al total) */
+  margin: 0; /* Elimina márgenes predeterminados del navegador */
+  padding: 0; /* Elimina padding predeterminado del navegador */
+}
+body, html {
+  width: 100%; /* Ocupa el 100% del ancho disponible del viewport */
+  height: 100%; /* Ocupa el 100% de la altura disponible del viewport */
+  font-family: Arial, sans-serif; /* Establece Arial como fuente principal, con sans-serif como fallback */
+  background-color: var(--azul-oscuro); /* Color de fondo usando variable CSS */
+  color: var(--azul-oscuro); /* Color de texto usando variable CSS */
+}
+
+.hero {
+  position: relative; /* Establece un contexto de posicionamiento para elementos hijos absolutos */
+  width: 100%;
+  height: 100vh; 
+  background-image: url('../img/EcovillaVistaGeneral.jpg'); 
+  background-position: center; /* Centra la imagen de fondo */
+  background-size:cover; /* Cubre todo el contenedor, manteniendo la relación de aspecto */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  display: flex; /* Activa el modelo Flexible Box Layout */
+  flex-direction: column; /* Organiza los elementos hijos en columna (verticalmente) */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos hijos con espacio máximo entre ellos */
+  align-items: center; /* Centra verticalmente los elementos hijos en el contenedor */
+  padding: 1rem 2rem; /* Espacio interno: 1rem arriba/abajo y 2rem izquierda/derecha */
+  background: rgba(255, 255, 255, 0.5); 
+}
+
+.logos img {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.auth-buttons button {
+  margin-left: 0.5rem; /* Margen exterior izquierdo de 0.5 rem (8px si el root es 16px) */
+  padding: 0.5rem 1rem; /* Relleno interno: 0.5rem arriba/abajo y 1rem izquierda/derecha */
+  background: var(--azul-oscuro);
+  border: none; /* Elimina cualquier borde predeterminado */
+  color: var(--blanco-calido);
+  cursor: pointer; /* Cambia el cursor a "mano" (indica que es clickeable) */
+  border-radius: 4px; /* Esquinas redondeadas con radio de 4px */
+}
+
+.auth-buttons button:hover {
+  background: var(--celeste); /* Cambia el color de fondo al pasar el mouse */
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background: rgba(255,255,255,0.7);
+}
+.slider img {
+  width: 100px;
+  height: auto;
+  margin: 0 0.5rem; /* Margen externo: 0 arriba/abajo y 0.5rem (8px) izquierda/derecha */
+  object-fit: contain; /* Escala la imagen para ajustarse al contenedor sin recortarse */
+}
+
+.content {
+  flex: 1; /* Ocupa todo el espacio disponible en el contenedor padre (flex-grow: 1) */
+  display: flex;
+  flex-direction: column; /* Apila los elementos hijos verticalmente */
+  justify-content: center; /* Centra los elementos hijos VERTICALMENTE */
+  padding: 2rem;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--blanco-calido);
+}
+.content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem; /* Espacio inferior de 1rem (16px) */
+}
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.5; /* Interlineado de 1.5 veces el tamaño de fuente */
+}
+.content .btn {
+  display: inline-block; /* Permite dimensionar como bloque pero fluye como inline */
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--morado-vibrante);
+  color: var(--blanco-calido);
+  text-decoration: none; /* Elimina subrayado en enlaces */
+  border-radius: 4px;
+}
+
+.newsletter {
+  position: absolute; /* Posicionamiento absoluto respecto al contenedor padre */
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--blanco);
+  color: var(--azul-oscuro);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+.newsletter input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--gris-suave);
+  border-radius: 4px;
+}
+.newsletter button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.labels {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
+  display: flex;
+}
+.labels .label {
+  margin: 0 0.5rem;
+  background: var(--morado-vivo);
+  color: var(--blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--negro-azulado);
+    color: var(--blanco-calido);
+}
+
+.footer-content img{
+    width: 900px;
+    height: 150px;
+
+}
+
+
+/*NOTAS
+    - El asterisco (*) es un selector universal que aplica estilos a todos los elementos HTML.
+    - El selector de clase (.) se usa para aplicar estilos a elementos con una clase específica.
+    - El selector de ID (#) se usa para aplicar estilos a un elemento con un ID específico.
+    - El selector de atributo ([]) se usa para aplicar estilos a elementos con un atributo específico
+    - El selector de pseudo-clase (:hover) se usa para aplicar estilos cuando el mouse está sobre un elemento.
+    - El selector de pseudo-elemento (::before) se usa para aplicar estilos antes del contenido
+    - Un Fallback es un valor alternativo que se utiliza si el valor principal no está disponible o no es compatible.
+
+*/
+
+/* ========== LOGIN STYLES ========== */
