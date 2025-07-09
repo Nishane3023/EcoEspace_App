@@ -9,19 +9,15 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 });
 
 // 2. Manejo del boton de Login
-// document.getElementById('loginBtn').addEventListener('click', () => {
-//   alert('Redirigiendo a Iniciar Sesión'); // Simula redirección mostrando alerta
-// });
 document.getElementById('loginBtn').addEventListener('click', function () {
     window.location.href = 'login.html'});
 
 
 // 3. Manejo del botón de Registro
-document.getElementById('registerBtn').addEventListener('click', () => {
-  alert('Redirigiendo a Registrarse'); // Simula redirección mostrando alerta
-});
-
+document.getElementById('registerBtn').addEventListener('click', function () {
+    window.location.href = 'register.html'});
 /*
+
 NOTAS:
 - El código JavaScript maneja la interactividad de la página, como el envío del formulario de newsletter y los botones de autenticación.
 - Se utiliza `addEventListener` para escuchar eventos de envío del formulario y clics en los botones.
