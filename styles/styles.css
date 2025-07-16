@@ -14,9 +14,9 @@
   --celeste-claro: #81e7f2;
   
   --morado-oscuro: #3a0192;
-  --morado-medio: #4c22ac;
+  --morado-medio: rgb(76, 34, 172);
   --morado-vibrante: #6422e1;
-  --lila: #924fea;
+  --lila: rgb(146, 79, 234);
   --rosado: #c95df5;
   
   /* Neutrales */
@@ -57,22 +57,23 @@ body, html {
   justify-content: space-between; /* Distribuye los elementos hijos con espacio máximo entre ellos */
   align-items: center; /* Centra verticalmente los elementos hijos en el contenedor */
   padding: 1rem 2rem; /* Espacio interno: 1rem arriba/abajo y 2rem izquierda/derecha */
-  background: rgba(255, 255, 255, 0.5); 
+  background: rgb(146, 79, 234, 0.3); 
 }
 
 .logos img {
-  height: 40px;
+  height: 65px;
   margin-right: 1rem;
 }
 
 .auth-buttons button {
   margin-left: 0.5rem; /* Margen exterior izquierdo de 0.5 rem (8px si el root es 16px) */
   padding: 0.5rem 1rem; /* Relleno interno: 0.5rem arriba/abajo y 1rem izquierda/derecha */
-  background: var(--azul-oscuro);
+  background: var(--blanco-calido);
   border: none; /* Elimina cualquier borde predeterminado */
-  color: var(--blanco-calido);
+  color: var(--morado-vibrante);
+  font-size: 0.9rem;
   cursor: pointer; /* Cambia el cursor a "mano" (indica que es clickeable) */
-  border-radius: 4px; /* Esquinas redondeadas con radio de 4px */
+  border-radius: 20px; /* Esquinas redondeadas con radio de 4px */
 }
 
 .auth-buttons button:hover {
@@ -83,7 +84,7 @@ body, html {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
-  background: rgba(255,255,255,0.7);
+  background: rgba(0, 0, 0, 0.3);
 }
 .slider img {
   width: 100px;
@@ -99,7 +100,7 @@ body, html {
   justify-content: center; /* Centra los elementos hijos VERTICALMENTE */
   padding: 2rem;
   max-width: 600px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(146, 79, 234, 0.3);
   color: var(--blanco-calido);
 }
 .content h1 {
@@ -117,7 +118,7 @@ body, html {
   background: var(--morado-vibrante);
   color: var(--blanco-calido);
   text-decoration: none; /* Elimina subrayado en enlaces */
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .newsletter {
@@ -148,27 +149,86 @@ body, html {
   cursor: pointer;
 }
 
-.labels {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
+.carousel-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.carousel-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
 }
-.labels .label {
-  margin: 0 0.5rem;
-  background: var(--morado-vivo);
-  color: var(--blanco);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* Internet Explorer 10+ */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari y Edge */
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  width: 30%;
+  min-width: 280px;
+  max-width: 360px;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.nav {
+  background: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
   cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+  transition: transform 0.2s;
+  z-index: 2;
 }
+
+.nav:hover {
+  transform: scale(1.1);
+}
+
 
 .footer {
     text-align: center;
     padding: 2rem;
-    background-color: var(--negro-azulado);
     color: var(--blanco-calido);
 }
 
@@ -177,6 +237,9 @@ body, html {
     height: 150px;
 
 }
+
+
+
 
 
 /*NOTAS
@@ -190,7 +253,7 @@ body, html {
 
 */
 
-/* ========== LOGIN STYLES ========== */
+/* ========== LOGIN AND REGISTER STYLES ========== */
 
 * {
   box-sizing: border-box;

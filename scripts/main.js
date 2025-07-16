@@ -16,8 +16,31 @@ document.getElementById('loginBtn').addEventListener('click', function () {
 // 3. Manejo del botón de Registro
 document.getElementById('registerBtn').addEventListener('click', function () {
     window.location.href = 'register.html'});
-/*
 
+
+// 4. Manejo del carrusel
+const carousel = document.querySelector(".carousel");
+const btnLeft = document.querySelector(".nav.left");
+const btnRight = document.querySelector(".nav.right");
+
+btnLeft.addEventListener("click", () => {
+  carousel.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+});
+
+btnRight.addEventListener("click", () => {
+  carousel.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+});
+
+
+
+
+    /*
 NOTAS:
 - El código JavaScript maneja la interactividad de la página, como el envío del formulario de newsletter y los botones de autenticación.
 - Se utiliza `addEventListener` para escuchar eventos de envío del formulario y clics en los botones.
